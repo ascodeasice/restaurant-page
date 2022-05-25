@@ -1,4 +1,8 @@
 import Tart from './images/tart.jpeg';
+import './style.css';
+import createHomePage from './functions/home'
+import load from './functions/load'
+import createMenuPage from './functions/menu';
 
 const contentDiv = document.getElementById("content")
 
@@ -13,4 +17,4 @@ function component() {
     return element
 }
 
-contentDiv.appendChild(component());
+// load(createHomePage());
