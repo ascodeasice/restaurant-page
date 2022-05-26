@@ -4,6 +4,7 @@ import '../style.css';
 
 function load(content) {
     const contentDiv = document.getElementById("content");
+    //TODO contentDiv.appendChild("tab");
     contentDiv.appendChild(content);
 }
 

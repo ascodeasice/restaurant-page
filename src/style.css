@@ -1,6 +1,31 @@
+:root {
+    --tabColor: yellow;
+    --tabHoverColor: lightblue;
+    --chosenTabColor: pink;
+}
+
 body {
     margin: 0;
     padding: 0;
 }
 
-#content {}
+#tabContainer {
+    /* TODO put tabContainer in the center */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 200px;
+    height: 50px;
+}
+
+.tab {
+    background-color: var(--tabColor);
+    border: solid 1px black;
+}
+
+.tab.chosen {
+    background-color: var(--chosenTabColor);
+}
+
+.tab:not(.chosen):hover {
+    background-color: var(--tabHoverColor);
+}
