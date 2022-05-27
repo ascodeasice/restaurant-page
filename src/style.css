@@ -1,25 +1,59 @@
 :root {
-    --tabColor: yellow;
+    --tabColor: rgb(61, 103, 167);
     --tabHoverColor: lightblue;
     --chosenTabColor: pink;
+    --headerColor: green;
+    --bgColor: rgb(143, 143, 185);
 }
 
 body {
     margin: 0;
     padding: 0;
+    color: white;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+button {
+    border: none;
+    color: white;
+}
+
+#content {
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+    min-height: 100vh;
+}
+
+/* SECTION header */
+
+#header {
+    background-color: var(--headerColor);
+    display: grid;
+    grid-template-rows: min-content 1fr;
+    box-shadow: 0 2px 5px rgb(87, 86, 86);
+    z-index: 2;
+}
+
+#heading {
+    margin-left: 10px;
 }
 
 #tabContainer {
-    /* TODO put tabContainer in the center */
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    width: 200px;
+    width: 30vw;
     height: 50px;
+    justify-self: center;
+    align-self: flex-end;
+    margin-bottom: 0;
+    column-gap: 2px;
 }
 
 .tab {
     background-color: var(--tabColor);
-    border: solid 1px black;
 }
 
 .tab.chosen {
@@ -28,4 +62,21 @@ body {
 
 .tab:not(.chosen):hover {
     background-color: var(--tabHoverColor);
+}
+
+/* SECTION home page */
+
+#homePage {
+    background-color: var(--bgColor);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#aboutText {
+    font-size: 1.5rem;
+}
+
+#hoursText {
+    font-size: 1.5rem;
 }
