@@ -20,7 +20,7 @@ function createMenuPage() {
     menuPage.id = "menuPage"
     const itemList = [itemFactory("Tarts", Tart, 5, "Chocolate, macha and other flavors of tart."),
     itemFactory("Bear cake", Bear, 25, "Cake of winnie the pooh."),
-    itemFactory("Cat Cake", Cat, 20, "A cake of a cute gray cat."),
+    itemFactory("Cat cake", Cat, 20, "A cake of a cute gray cat."),
     itemFactory("Deer cake", Deer, 30, "A cake of an anime deer."),
     itemFactory("Dunkey cake", Eeyore, 2.5, "A cake of Eeyore."),
     itemFactory("Halloween cake", Halloween, 25, "A cake for Halloween."),
@@ -32,7 +32,7 @@ function createMenuPage() {
         container.classList.add("menuContainer");
 
         const name = document.createElement("h1");
-        name.innerText = item.name + "    " + item.getPriceText();
+        name.innerText = item.name;
         name.classList.add("itemTitle");
         container.appendChild(name);
 
@@ -42,7 +42,7 @@ function createMenuPage() {
         container.appendChild(image);
 
         const description = document.createElement("p");
-        description.innerText = item.description;
+        description.innerText = item.description + "\n\n" + item.getPriceText();
         description.classList.add("itemDescription");
         container.appendChild(description);
         menuPage.appendChild(container);
